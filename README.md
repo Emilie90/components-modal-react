@@ -1,19 +1,63 @@
-# TypeScript Components by Rupert
+# Components Modal React
 
-This repository was created as part of a guide to publishing TypeScript React components. You can read the guide over here: [Publishing TypeScript React components to NPM](https://fildon.hashnode.dev/publishing-typescript-react-components-to-npm)
+A simple and customizable React modal component, designed for ease of use and flexibility.
 
 ## Getting Started
 
 Install this package:
 
 ```shell
-npm add typescript-components-by-rupert
+npm i components-modal-react
 ```
 
-Import the Counter component:
+Import the Modal component:
 
 ```js
-import { Counter } from "typescript-components-by-rupert";
+import Modal from "components-modal-react/modal";
 ```
 
-You can then render the `Counter` component like any other React component in JSX.
+## Usage
+
+Here's how you can use the modal component in your React project.
+
+# Basic Example
+
+```shell
+import React, { useState } from 'react';
+import Modal from "components-modal-react/modal";
+
+
+const App = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  return (
+    <div>
+      <button onClick={() => setShowModal(true)}>Open Modal</button>
+      <Modal show={showModal} onClose={() => setShowModal(false)}>
+        <h1>This is a Modal</h1>
+        <p>Here is some modal content!</p>
+      </Modal>
+    </div>
+  );
+};
+
+export default App;
+
+```
+
+# Props
+
+The Modal component accepts the following props:
+
+Prop Type Required Description
+show boolean Yes Controls whether the modal is visible or not.
+onClose () => void Yes Callback function to handle closing the modal.
+children React.ReactNode No The content to be displayed inside the modal.
+
+# CSS Styling
+
+If you want to customize the styles, you can either modify Modal.css or override the styles in your own stylesheet by targeting the following class names:
+
+.modal-overlay – The overlay behind the modal.
+.modal-content – The main modal container.
+.button – The close button inside the modal.
