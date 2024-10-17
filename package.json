@@ -1,6 +1,6 @@
 {
   "name": "components-modal-react",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Fenêtre Modal pour React",
   "main": "index.js",
   "scripts": {

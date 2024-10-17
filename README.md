@@ -49,15 +49,16 @@ export default App;
 
 The Modal component accepts the following props:
 
-Prop Type Required Description
-show boolean Yes Controls whether the modal is visible or not.
-onClose () => void Yes Callback function to handle closing the modal.
-children React.ReactNode No The content to be displayed inside the modal.
+| Prop       | Type              | Required | Description                                    |
+| ---------- | ----------------- | -------- | ---------------------------------------------- |
+| `show`     | `boolean`         | Yes      | Controls whether the modal is visible or not.  |
+| `onClose`  | `() => void`      | Yes      | Callback function to handle closing the modal. |
+| `children` | `React.ReactNode` | No       | The content to be displayed inside the modal.  |
 
 # CSS Styling
 
 If you want to customize the styles, you can either modify Modal.css or override the styles in your own stylesheet by targeting the following class names:
 
-.modal-overlay – The overlay behind the modal.
-.modal-content – The main modal container.
-.button – The close button inside the modal.
+- **`.modal-overlay`** – The overlay behind the modal.
+- **`.modal-content`** – The main modal container.
+- **`.button`** – The close button inside the modal.
